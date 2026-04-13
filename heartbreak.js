@@ -86,6 +86,10 @@ function showEndMessage() {
 
 function startSlideshow() {
   if (isPlaying) return;
+  if (imagePaths.length === 0) {
+    updateSlide();
+    return;
+  }
   if (endShown) {
     endShown = false;
     shownSlides = 0;
@@ -95,7 +99,7 @@ function startSlideshow() {
   isPlaying = true;
   playBtn.textContent = "Pause Memories";
   updateSlide();
-  slideInterval = setInterval(updateSlide, 4000);
+  slideInterval = setInterval(updateSlide, 2000);
 }
 
 function pauseSlideshow() {
@@ -154,7 +158,7 @@ function initParticles() {
 async function initPage() {
   imageCaption.textContent = "Detecting images from root folder (jpg/jpeg/png)...";
   imagePaths.push(...(await detectImages(10)));
-  updateSlide();
+  startSlideshow();
   initParticles();
 
   setTimeout(() => {
