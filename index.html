@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Broken Memories</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="heartbreak.css">
+</head>
+<body>
+  <div id="loadingScreen" class="loading-screen">
+    <div class="loading-heart"></div>
+    <p>Loading memories...</p>
+  </div>
+
+  <canvas id="particlesCanvas" aria-hidden="true"></canvas>
+
+  <main class="page">
+    <section class="glass-card">
+      <p class="chip">Heartbreak Story</p>
+      <h1 class="title typewriter">You Broke Me, But I Still Remember Everything</h1>
+      <p class="subtitle fade-up">
+        I trusted deeply, loved honestly, and learned painfully.
+      </p>
+      <p class="subtitle fade-up delay-1">
+        Not every goodbye is a loss; sometimes it saves your peace.
+      </p>
+      <p class="subtitle fade-up delay-2">
+        I do not chase the past anymore, I choose myself now.
+      </p>
+
+      <div class="slideshow-wrap">
+        <div class="slideshow-frame">
+          <img id="memoryImage" src="" alt="Memory slideshow" />
+          <div class="image-overlay"></div>
+          <div id="endMessage" class="end-message" aria-live="polite">
+            <div class="broken-heart">&#128148;</div>
+            <p>Thank for everthing cheater aanchal</p>
+          </div>
+        </div>
+        <div id="imageCaption" class="caption">Memories will appear here...</div>
+      </div>
+
+      <div class="controls">
+        <button id="playBtn" type="button">Play Memories</button>
+      </div>
+    </section>
+
+    <section class="final-message glass-card">
+      <h2>Final Message</h2>
+      <p id="finalText">
+        Thank you for the lesson. I learned not to trust blindly, and I learned to value myself first.
+      </p>
+    </section>
+  </main>
+
+  <iframe
+    class="bg-music-frame"
+    src="https://www.youtube.com/embed/H39werth1qs?autoplay=1&loop=1&playlist=H39werth1qs&controls=0&modestbranding=1&rel=0&playsinline=1"
+    title="Background song"
+    allow="autoplay; encrypted-media"
+    referrerpolicy="strict-origin-when-cross-origin"
+  ></iframe>
+
+  <script src="heartbreak.js"></script>
+</body>
+</html>
